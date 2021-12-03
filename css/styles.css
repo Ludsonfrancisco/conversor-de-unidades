@@ -1,0 +1,17 @@
+body {
+  width: 90%;
+  margin: auto;
+  margin-top: 3rem;
+}
+
+.unidade {
+  margin-top: 25px;
+}
+
+.unidade input {
+  width: 30%;
+}
+
+.unidade label {
+  font-weight: bold;
+}
