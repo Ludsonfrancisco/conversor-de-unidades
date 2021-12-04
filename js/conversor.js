@@ -1,16 +1,15 @@
 $(() => {
   $('#calc').click(() => {
-    $('#formValidate').valid()
     $('#formValidate').validate({
       debug: true,
       rules: {
         ml: {
           required: true,
           number: true,
-          accept: "Digite um número!"
         }
       }
     })
+    $('#formValidate').valid()
 
     const milhas = parseFloat($('#ml').val())
     const metros = (milhas * 1609.34).toFixed(2)
