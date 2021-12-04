@@ -1,14 +1,26 @@
 $(() => {
-  $('button').click(() => {
-    const milha = $('#ml')
-    const metro = $('#mt')
+  $('#calc').click(() => {
+    $('#formValidate').valid()
+    $('#formValidate').validate({
+      debug: true,
+      rules: {
+        ml: {
+          required: true,
+          number: true,
+          accept: "Digite um número!"
+        }
+      }
+    })
 
-    const conversonUnidadeParaMetro = (milha) => milha.val() * 1609.34
-    // const conversonUnidadeParaMilha = (metro) => metro.val() / 1609.34
+    const milhas = parseFloat($('#ml').val())
+    const metros = (milhas * 1609.34).toFixed(2)
 
-    metro.val(conversonUnidadeParaMetro(milha).toFixed(2))
-    // milha.val(conversonUnidadeParaMilha(metro).toFixed(2))
-
+    if (isNaN(milhas)) {
+      $('#mt').val('')
+    } else {
+      $('#mt').val(metros)
+    }
   })
-
 })
+
+

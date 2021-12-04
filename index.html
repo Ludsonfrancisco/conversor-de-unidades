@@ -17,26 +17,44 @@
   <body>
     <h1>Conversor de Unidades</h1>
 
-    <div class="mb-3 unidade">
-      <label class="form-label">Distancia Milhas</label>
-      <input type="text" value="0" class="form-control" name="milhas" id="ml" />
-    </div>
+    <form id="formValidate" method="post" action="">
+      <div class="mb-3 unidade">
+        <label for="ml" class="form-label">Distancia Milhas</label>
+        <input
+          type="text"
+          class="form-control"
+          name="ml"
+          id="ml"
+          placeholder="Milhas"
+          required
+        />
+      </div>
 
-    <div class="mb-3 unidade">
-      <label class="form-label">Distancia Metros</label>
-      <input type="text" value="0" class="form-control" name="metros" id="mt" />
-    </div>
+      <div class="mb-3 unidade">
+        <label for="mt" class="form-label">Distancia Metros</label>
+        <input
+          type="text"
+          class="form-control"
+          name="mt"
+          id="mt"
+          placeholder="Metros"
+        />
+      </div>
+    </form>
 
-    <button type="button" class="btn btn-primary" id="bt" name="bt" readonly>
+    <button type="button" class="btn btn-primary" id="calc" name="bt">
       Converter
     </button>
 
-    <script src="./js/jquery-3.6.0.min.js"></script>
-    <script
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="http://jqueryvalidation.org/files/dist/jquery.validate.js"></script>
+    <script src="http://jqueryvalidation.org/files/dist
+/additional-methods.min.js"></script>
+    <!-- <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
-    ></script>
+    ></script> -->
     <script src="./js/conversor.js"></script>
   </body>
 </html>
